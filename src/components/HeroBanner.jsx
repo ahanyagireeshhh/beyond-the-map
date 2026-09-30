@@ -2,9 +2,9 @@ import React from 'react';
 import { Compass, MapPin, Sparkles, Navigation, Flame, Eye, ChevronRight } from 'lucide-react';
 import { SIMULATED_ORIGINS, LOCATIONS } from '../data/locations';
 
-export default function HeroBanner({ 
-  userOrigin, 
-  setUserOrigin, 
+export default function HeroBanner({
+  userOrigin,
+  setUserOrigin,
   onQuickCategorySelect,
   onOpenScanner,
   onExploreLocation
@@ -30,7 +30,7 @@ export default function HeroBanner({
 
         <p className="hero-description">
           Step into centuries of maritime trade, aromatic Dum Biryani, 150-year-old rusted sea bridges,
-          and living Uru shipwrights. Scan physical monuments, solve location-specific quests, 
+          and living Uru shipwrights. Scan physical monuments, solve location-specific quests,
           and navigate Calicut with your personalized AI travel companion.
         </p>
 
@@ -80,7 +80,7 @@ export default function HeroBanner({
             ].map((spot) => {
               const loc = LOCATIONS.find(l => l.id === spot.id);
               return (
-                <button 
+                <button
                   key={spot.id}
                   id={`pill-${spot.id}`}
                   className={`quick-pill highlight-famous-spot ${spot.type === 'food' ? 'food-spot-pill' : 'place-spot-pill'}`}
